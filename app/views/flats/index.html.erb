@@ -1,0 +1,23 @@
+<h1>Flats#index</h1>
+<p>Find me in app/views/flats/index.html.erb</p>
+
+<h1>All our Flats (<%= @flats.count %>)</h1>
+<div class="row row-cols-4">
+
+  <% @flats.each do |flat| %>
+    <div class="card m-3 ">
+      <div>
+        <p class="flat-card-image" style="background-image: url('https://media.istockphoto.com/id/123959460/fr/photo/maison-pourrie.jpg?s=612x612&w=is&k=20&c=KRQCQjvrmwXk44OflvZOXiiH_FsodGFiVLW33OuGoaI=');">
+      </div>
+      <div>
+        <h2><%= flat.name %></h2>
+        <p><%= flat.description %></p>
+        <p><%= flat.address %></p>
+      </div>
+      <div>
+        <p><%= flat.price_per_night %></p>
+        <p><%= flat.number_of_guests %></p>
+      </div>
+    </div>
+  <% end %>
+</div>
